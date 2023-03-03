@@ -44,9 +44,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Anúncio de um sofá que é possivel visualiza-lo em 360.
+Uma página com uma dashboard e uma tela de contato:
 
-- [Acesse o projeto finalizado, online](https://github.com/HenriqueMVSS/Hs-Admin-React)
+- [Acesse o projeto finalizado, online](https://hs-admin.netlify.app/)
 
 
 Para rodar o projeto:
@@ -58,10 +58,6 @@ Após concluir o clone do repositório: <br>
 
 Roda `npm install` para instalar as dependências do projeto.
 
-
- ## 🔖 Layout
-
-Você pode visualizar o projeto online através [DESSE LINK](https://hs-admin.netlify.app/). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
