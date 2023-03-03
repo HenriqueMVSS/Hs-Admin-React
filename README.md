@@ -59,9 +59,9 @@ Após concluir o clone do repositório: <br>
 Roda `npm install` para instalar as dependências do projeto.
 
 
-<!-- ## 🔖 Layout
+ ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/4uTyNwnKfXhwiMK9ERqZnF/%23boraCodar---Desafio-2-(Community)?node-id=103%3A95&t=BJaw8OjvfXu65bRF-0). É necessário ter conta no [Figma](https://figma.com) para acessá-lo. -->
+Você pode visualizar o projeto online através [DESSE LINK](https://hs-admin.netlify.app/). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
