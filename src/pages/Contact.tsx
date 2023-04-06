@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 import { useState } from "react";
 import styled from "@emotion/styled";
@@ -24,18 +23,20 @@ function isValidName(name: string) {
 }
 
 function isValidEmail(email: string) {
-  if (!email.includes("@")) {
-    return "Este email é inválido";
+  let regexEmail = /([a-z 0-9 .])+@([a-z]{3,9})([.]{1})([a-z]{3})/g;
+
+  if (!regexEmail.test(email)) {
+    return "Digite um e-mail válido: example@dominio.com";
   }
 
   return null;
 }
 
 function isValidPhoneNumber(phoneNumber: string) {
-  const validPhone = /([0-9]{3})([0-9]{5})([0-9]{4})/g;
+  const validPhone = /([0-9]{2})([0-9]{5})-?([0-9]{4})/g;
 
   if (!validPhone.test(phoneNumber)) {
-    return "O número de telefone é inválido";
+    return "Digite um número de telefone válido: DDD XXXXX-XXXX";
   }
 
   return null;
@@ -66,7 +67,7 @@ const MessageError = styled.span`
   font-size: 13px;
 `;
 
-export default function Contact() {
+export function Contact() {
   const [formState, setFormState] = useState(initialFormState);
   const validName = isValidName(formState.name);
   const validEmail = isValidEmail(formState.email);
@@ -83,6 +84,7 @@ export default function Contact() {
       <Contact.formContainer>
         <Contact.formTitle>Entrar em contato</Contact.formTitle>
         <Contact.Form
+          data-testid="contact-form"
           noValidate
           method="POST"
           onSubmit={async (e) => {
@@ -95,14 +97,6 @@ export default function Contact() {
               form.append("phone-number", formState.phoneNumber);
               form.append("message", formState.message);
 
-              await fetch(
-                "https://getform.io/f/7e2ad97e-0c12-43c5-82f3-de4ae8e59c9d",
-                {
-                  method: "post",
-                  body: form,
-                }
-              );
-
               alert("Formulário enviado com sucesso");
               setFormState(initialFormState);
             }
@@ -111,6 +105,7 @@ export default function Contact() {
           <div className="row">
             <div>
               <Contact.Field
+                data-testid="contact-form-input"
                 type="text"
                 name="fullname"
                 id="fullname"
@@ -128,6 +123,7 @@ export default function Contact() {
           <div className="row">
             <div>
               <Contact.Field
+                data-testid="contact-form-input"
                 type="email"
                 name="email"
                 id="email"
@@ -142,11 +138,13 @@ export default function Contact() {
             </div>
             <div>
               <Contact.Field
+                data-testid="contact-form-input"
                 type="tel"
                 name="phone-number"
                 id="phone-number"
                 className="field"
-                placeholder="(DDD) 00000-0000"
+                placeholder="XX 00000-0000"
+                maxLength={13}
                 value={formState.phoneNumber}
                 onChange={(e) =>
                   setFormState({ ...formState, phoneNumber: e.target.value })
@@ -159,6 +157,7 @@ export default function Contact() {
           <div className="row">
             <div>
               <Contact.Textarea
+                data-testid="contact-form-input"
                 id="message"
                 className="field"
                 placeholder="Mensagem"
@@ -170,7 +169,9 @@ export default function Contact() {
               <ErrorMessage message={validMessage} />
             </div>
           </div>
-          <Contact.formButton type="submit">Enviar</Contact.formButton>
+          {isFormValid && (
+            <Contact.formButton type="submit">Enviar</Contact.formButton>
+          )}
         </Contact.Form>
       </Contact.formContainer>
       <Contact.Footer>

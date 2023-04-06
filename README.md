@@ -1,13 +1,12 @@
-<h1 align="center"> Projeto de Interfaces React</h1>
+<h1 align="center"> HS Admin React</h1>
 
 <p align="center">
-Projeto desenvolvido para avaliação na disciplina de Interfaces React, ministrada pelo professor Alexandre durante a Pós Graduação em Desenvolvimento Web Full Stack. <br/>
+Projeto desenvolvido para avaliação na disciplina de React, ministrada pelo professor Alexandre durante a Pós Graduação em Desenvolvimento Web Full Stack realizada na Infnet. <br/>
 </p>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <!-- <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -37,6 +36,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React ChartJs
 - Recharts
 - React Router
+- Jest
 - Styled Components
 - Git e Github
 - Vite
@@ -44,7 +44,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Anúncio de um sofá que é possivel visualiza-lo em 360.
+Uma dashboard com uma tela de formulário de contato.
 
 - [Acesse o projeto finalizado, online](https://github.com/HenriqueMVSS/Hs-Admin-React)
 
@@ -57,11 +57,6 @@ Através de algum terminal execute o seguinte comando: <br>
 Após concluir o clone do repositório: <br>
 
 Roda `npm install` para instalar as dependências do projeto.
-
-
-<!-- ## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/4uTyNwnKfXhwiMK9ERqZnF/%23boraCodar---Desafio-2-(Community)?node-id=103%3A95&t=BJaw8OjvfXu65bRF-0). É necessário ter conta no [Figma](https://figma.com) para acessá-lo. -->
 
 ## :memo: Licença
 

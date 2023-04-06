@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useRouteError } from "react-router-dom";
 import { ImgNotFound } from "../components/ImgNotFound";
 
-export default function NotFound() {
+export function NotFound() {
   const error = useRouteError();
   console.error( error);
 

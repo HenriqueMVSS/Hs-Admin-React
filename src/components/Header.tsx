@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
@@ -13,8 +12,8 @@ export function Header(props: HeaderProps) {
         <Header.Content>
           <Header.Logo><Logo /></Header.Logo>
           <Header.PropsTitle>{props.title}</Header.PropsTitle>
-          <Header.Link to="/">Home</Header.Link>
-          <Header.Link to="/contact">Contato</Header.Link>
+          <Header.Link data-testid="home-link" to="/">Home</Header.Link>
+          <Header.Link data-testid="contact-link" to="/contact">Contato</Header.Link>
         </Header.Content>
       </Header.Header>
   )

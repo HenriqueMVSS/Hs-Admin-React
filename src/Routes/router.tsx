@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import Contact from "../pages/Contact";
-import NotFound from "../pages/NotFound";
+import { Contact } from "../pages/Contact";
+import { NotFound } from "../pages/NotFound";
 
 import {Home} from "../pages/Home";
 
